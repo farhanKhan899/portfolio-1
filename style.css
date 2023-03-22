@@ -1,0 +1,211 @@
+/* ----font family--- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap");
+/* ----font family--- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* ----every page content-- */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ----end every page content-- */
+/* -----backgeound---- */
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/image1.gif);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  background-attachment: fixed;
+  /* z-index: 1; */
+}
+/* -----end background--- */
+
+/* #hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+} */
+/* -----hero plased---- */
+#hero .hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+/* -----end hero plased---- */
+#hero h1 {
+  display: block;
+  width: fit-content;
+
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_revel 0.9s ease forwards;
+  /* animation-delay: 1.5s; */
+}
+@keyframes text_revel {
+  100% {
+    color: aliceblue;
+  }
+}
+@keyframes text_revel_name {
+  100% {
+    color: rgb(153, 37, 37);
+    font-size: 4rem;
+  }
+}
+.color {
+  animation: text_revel_name 0.2s ease forwards;
+  animation-delay: 2.3s;
+}
+#hero h1:nth-child(1) {
+  animation-delay: 0.8s;
+}
+#hero h1:nth-child(2) {
+  animation: text_revel_name 0.8s ease forwards;
+  animation-delay: 1.6s;
+}
+#hero h1:nth-child(3) {
+  animation-delay: 2.2s;
+}
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(153, 37, 37);
+  animation: text_reveal_box 1s ease;
+  /* animation-delay: 1s; */
+}
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+#hero h1:nth-child(1) span {
+  animation-delay: 0.2s;
+}
+#hero h1:nth-child(2) span {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(3) span {
+  animation-delay: 1.8s;
+}
+
+/* ----portfolio button--- */
+#hero .cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: aliceblue;
+  background-color: transparent;
+  border: 2px solid brown;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: light;
+  margin-top: 30px;
+  transition: 1s ease-in;
+  transition-property: background-color, color;
+}
+#hero .cta:hover {
+  color: aliceblue;
+  background-color: brown;
+}
+/* ----end portfolio bu-- */
+
+/* ----services section-- */
+#services {
+}
+#services .services {
+  /* flex-direction: column; */
+  display: grid;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#services .service-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+#services .service-top span {
+  color: brown;
+}
+#services .service-top p {
+  font-size: 1.4rem;
+  margin: 5px 12%;
+  margin-bottom: 40px;
+  line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+#services .service-item {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 5px;
+  background-image: linear-gradient(
+      rgba(71, 69, 69, 0.6),
+      rgba(71, 69, 69, 0.6)
+    ),
+    url(./img/download.png);
+  background-size: cover;
+  margin: 10px 8% 30px;
+  color: aliceblue;
+  box-shadow: 14px 10px 18px -2px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: 14px 10px 18px -2px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 14px 10px 18px -2px rgba(0, 0, 0, 0.62);
+}
+#services .service-bottom .icon img {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 13px;
+}
+#services .service-item h2 {
+  font-size: 2rem;
+  color: aliceblue;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#services .service-item p {
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+/* ----end services section-- */
